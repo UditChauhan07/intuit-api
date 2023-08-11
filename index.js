@@ -13,6 +13,10 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
 // Routes
 app.use(userRoutes);
 app.use(authRoutes);
